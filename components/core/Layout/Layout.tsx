@@ -22,6 +22,7 @@ const Layout: React.FC = ({ children }) => {
       const { scrollTop } = document.documentElement;
       setHasScrolled(scrollTop > offset);
     }, 10);
+    handleScroll();
     document.addEventListener('scroll', handleScroll);
     return () => document.removeEventListener('scroll', handleScroll);
   }, []);
