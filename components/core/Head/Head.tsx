@@ -1,5 +1,5 @@
 import React from 'react';
-import NextHead from 'next/Head';
+import NextHead from 'next/head';
 import { DefaultSeo } from 'next-seo';
 import { createGlobalStyle } from 'styled-components';
 import { globalCSS } from '@assets/GlobalStyles';
