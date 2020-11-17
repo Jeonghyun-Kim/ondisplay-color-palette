@@ -16,24 +16,21 @@ const Layout: React.FC = ({ children }) => {
     isDisabled: !displayModal,
   });
 
-  const handleScroll = React.useCallback(() => {
-    debounce(() => {
+  React.useEffect(() => {
+    const handleScroll = debounce(() => {
       const offset = 0;
       const { scrollTop } = document.documentElement;
       setHasScrolled(scrollTop > offset);
-    }, 1);
-  }, []);
-
-  React.useEffect(() => {
+    }, 10);
     document.addEventListener('scroll', handleScroll);
     return () => document.removeEventListener('scroll', handleScroll);
-  }, [handleScroll]);
+  }, []);
 
   return (
     <Root>
       <header
         className={cn(
-          'stick top-0 bg-primary z-40 transition-all duration-150',
+          'sticky top-0 bg-primary z-40 transition-all duration-150',
           {
             'shadow-magical': hasScrolled,
           }
