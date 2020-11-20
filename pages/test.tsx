@@ -29,7 +29,7 @@ export default function Test() {
     slidesPerView: 1,
     centered: true,
     duration: 1000,
-    slideChanged: (s) => {
+    afterChange: (s) => {
       if (!isInitial.current) {
         setIndex(s.details().relativeSlide);
         setPlaying(true);
@@ -80,8 +80,6 @@ export default function Test() {
           poster={`/videos/posters/${index + 1}.jpg`}
           src={`/videos/${index + 1}.mp4`}
           playsInline
-          muted
-          autoPlay
           onEnded={() => handleNext()}
           onLoad={(e) => e.currentTarget.play()}
         />
