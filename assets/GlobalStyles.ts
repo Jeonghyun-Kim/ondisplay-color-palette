@@ -42,7 +42,7 @@ export const globalCSS = css`
   }
 
   [data-theme='dark'] {
-    --primary: #000000;
+    --primary: #212529;
     --primary-2: #111;
     --secondary: #ffffff;
     --secondary-2: #f1f3f5;
