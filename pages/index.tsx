@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import { Layout } from '@components/core';
 import { ColorBox } from '@components/product';
-import { Color } from '@lib/color-to-hex';
 
 import colors from '../public/color-palette.json';
 import { useTheme } from 'next-themes';
