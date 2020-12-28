@@ -14,12 +14,15 @@ const ColorBox: React.FC<Props> = ({ label, color, className, ...props }) => {
   return (
     <Root className={cn(className, 'mb-4')} {...props}>
       <Text className="text-center">{label}</Text>
-      <Box
-        className={cn('box', 'transition duration-150 ease-in-out')}
-        style={{
-          backgroundColor: color,
-        }}
-      />
+      <Box className={cn('box', 'transition duration-150 ease-in-out')}>
+        <p>inner text</p>
+        <div
+          className="bg-box transition duration-150 ease-in-out"
+          style={{
+            backgroundColor: color,
+          }}
+        />
+      </Box>
       <div className="flex justify-between items-end mt-2">
         <Text>{color.toUpperCase()}</Text>
         <CopyToClipboard text={color}>
