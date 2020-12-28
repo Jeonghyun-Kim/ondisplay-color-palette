@@ -34,7 +34,7 @@ const Layout: React.FC = ({ children }) => {
           'sticky top-0 bg-primary z-40 transition-all duration-150',
           {
             'shadow-magical': hasScrolled,
-          }
+          },
         )}
       >
         <Container full>
